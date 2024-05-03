@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pradnya's Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto", sans-serif;
+      }
+      img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+      /* Added styles for name visibility */
+      .w3-display-bottomleft {
+        background-color: rgba(255, 255, 255, 0.7); /* Light background color */
+        padding: 10px; /* Added padding */
+      }
+      .container {
+        width: 90%;
+        height: 60vh;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .container form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .inputBox {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .inputBox input[type="text"],
+      .inputBox input[type="email"] {
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0px 10px;
+        font-size: 16px;
+        color: #444;
+      }
+
+      .inputBox textarea {
+        width: 100%;
+        height: 120px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0px 10px;
+        font-size: 16px;
+        color: #444;
+      }
+
+      .inputBox button {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        background: rgb(0, 119, 255);
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .inputBox button:hover {
+        background: rgb(0, 17, 255);
+        transition: all 0.3s ease;
+      }
+
+      ::placeholder {
+        font-size: 16px;
+      }
+
+      .alert {
+        width: 100%;
+        background: rgb(0, 255, 106);
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 900;
+        display: none;
+      }
+      .sec5 {
+  font-family: "Outfit";
+  background: linear-gradient(#ffdad5, #fff7f9);
+}
+.contact-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #a363aa;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: #a363aa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contact-input {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+.contact-left textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+.contact-input:focus {
+  border: 2px solid #ff994f;
+}
+.contact-input:placeholder {
+  color: #a9a9a9;
+}
+.contact-left button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
+}
+.contact-left button img {
+  height: 15px;
+}
+.contact-right img {
+  width: 500px;
+}
+@media (max-width: 800px) {
+  .contact-input {
+    width: 80vw;
+  }
+  .contact-right {
+    display: none;
+  }
+}
+  /* Define CSS styles for the certifications */
+  .certification-container {
+    display: inline-block; /* Display certifications inline */
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Let height adjust automatically */
+    margin-right: 20px; /* Add some space between certifications */
+  }
+
+  /* Styles for the images */
+  .certification-img {
+    width: 100%;
+    height: auto;
+  }
+  .certification-container {
+    display: inline-block; /* Display certifications inline */
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Let height adjust automatically */
+    margin-right: 20px; /* Add some space between certifications */
+    text-align: center; /* Center align contents */
+  }
+
+  /* Styles for the images */
+  .certification-img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd; /* Add border to images */
+    border-radius: 5px; /* Optional: Add rounded corners */
+  }
+.resume-btn {
+  display: block;
+  margin-top: 10px; 
+  padding:10px;
+  border: 1px solid #bb628d;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+    </style>
+  </head>
+  <body class="w3-light-grey">
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width: 1400px">
+      <!-- The Grid -->
+      <div class="w3-row-padding">
+        <!-- Left Column -->
+        <div class="w3-third">
+          <div class="w3-white w3-text-grey w3-card-4">
+            <div class="w3-display-container">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio219-3f5d4.appspot.com/o/p.jpeg?alt=media&token=3df02fc4-5dd6-42ba-8397-59c422f4748e"
+                style="width: 100%"
+                alt="Avatar"
+              />
+              <div
+                class="w3-display-bottomleft w3-container w3-text-black"
+                style="margin-bottom: 15px; text-align: center"
+              >
+                <h2><strong>PRADNYA MAGENNAVAR</strong></h2>
+              </div>
+            </div>
+            <div class="w3-container">
+              <p>
+                <i
+                  class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"
+                ></i
+                >Software Engineer
+              </p>
+              <p>
+                <i
+                  class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"
+                ></i
+                >Manjari, Karnataka
+              </p>
+              <p>
+                <i
+                  class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"
+                ></i
+                ><a href="mailto:magennavarpradnya@gmail.com"
+                  >magennavarpradnya@gmail.com</a
+                >
+              </p>
+              <p>
+                <i
+                  class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"
+                ></i
+                ><a href="tel:+919019846584">9019846584</a>
+              </p>
+              <p>
+                <i class="fa fa-map-marker fa-fw w3-margin-right w3-large w3-text-teal"></i
+                ><a href="https://www.google.com/maps/search/?api=1&query=Sanjay+Ghodawat+University,+Kolhapur"
+                  target="_blank">Sanjay Ghodawat University, Kolhapur</a
+                >
+              </p>
+              <p>
+                <i class="fa fa-university fa-fw w3-margin-right w3-large w3-text-teal"></i
+                ><a href="https://maps.app.goo.gl/ZmjLcfd4zdShMdhM7" target="_blank"> Tungal science pu composite, Jamkhandi</a>
+              </p>
+              <p>
+                <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-large w3-text-teal"></i
+                ><a href="https://maps.app.goo.gl/EmQFhxh74cY6ERM98" target="_blank">KLE Society's cbse school, Ankali</a>
+              </p>
+              
+                
+              
+              <div class="w3-row" style="text-align: center; font-size: 140%">
+                <a
+                  href="https://www.snapchat.com/add/pradnya_magenna?share_id=1kHwYvDyu2c&locale=en-US"
+                  target="_blank"
+                  class="w3-hover-opacity"
+                  ><i class="fa fa-snapchat fa-2x"> </i
+                ></a> &nbsp;&nbsp;
+
+                <a
+                  href="https://www.instagram.com/insaneee.0219?igsh=azVyODJyZzc5ajRi"
+                  target="_blank"
+                  class="w3-hover-opacity"
+                  ><i class="fa fa-instagram fa-2x"> </i
+                ></a> &nbsp;&nbsp;
+                <a
+                  href="https://www.linkedin.com/in/pradnya-magennavar-9b7209274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  class="w3-hover-opacity"
+                  ><i class="fa fa-linkedin fa-2x"> </i
+                ></a> &nbsp;&nbsp;
+                <a
+                  href="https://github.com/pradnya192"
+                  target="_blank"
+                  class="w3-hover-opacity"
+                  ><i class="fa fa-github fa-2x"></i
+                ></a>
+              </div>
+              <hr />
+              
+              <p class="w3-large">
+                <b
+                  style="color: black;"
+                  ><i
+                    class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"
+                  ></i
+                  ><strong>SKILLS</strong></b
+                >
+              </p>
+              
+              <p><a href="https://github.com/pradnya192/c/tree/main/c" target="_blank">C Programming</a></p>
+              <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 90%">55%</div>
+              </div>
+              
+<<p><a href="https://github.com/pradnya192/dsa/tree/main/dsa" target="_blank">C Programming with DSA</a></p>
+<div class="w3-light-grey w3-round-xlarge w3-small">
+  <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
+    <div class="w3-center w3-text-white">45%</div>
+  </div>
+</div>
+
+<p><a href="https://github.com/pradnya192/Oop-withc-/tree/main/c%2B%2B" target="_blank">C++</a></p>
+<div class="w3-light-grey w3-round-xlarge w3-small">
+  <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 75%">
+    60%
+  </div>
+</div>
+
+<p><a href="https://github.com/pradnya192/java/tree/main/java%20exp" target="_blank">JAVA</a></p>
+<div class="w3-light-grey w3-round-xlarge w3-small">
+  <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 80%">
+    65%
+  </div>
+</div>
+<br />
+
+
+<p class="w3-large">
+  <b
+    style="color: black;"
+    ><i
+      class="fa fa-globe fa-fw w3-margin-right w3-text-black"
+    ></i
+    ><strong>LANGUAGES</strong></b
+  >
+</p>
+              <p>English</p>
+              <div class="w3-light-grey w3-round-xlarge">
+                <div
+                  class="w3-round-xlarge w3-teal"
+                  style="height: 24px; width: 90%"
+                ></div>
+              </div>
+              <p>Marathi</p>
+              <div class="w3-light-grey w3-round-xlarge">
+                <div
+                  class="w3-round-xlarge w3-teal"
+                  style="height: 24px; width: 90%"
+                ></div>
+              </div>
+              <p>Hindi</p>
+              <div class="w3-light-grey w3-round-xlarge">
+                <div
+                  class="w3-round-xlarge w3-teal"
+                  style="height: 24px; width: 80%"
+                ></div>
+              </div>
+
+
+              <p>German(A1)</p>
+              <div class="w3-light-grey w3-round-xlarge">
+                <div
+                  class="w3-round-xlarge w3-teal"
+                  style="height: 24px; width: 45%"
+                ></div>
+              </div>
+              <br />
+            </div>
+          </div>
+          <br />
+
+          
+          <!-- End Left Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+          <!-- About Me -->
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-text-black w3-padding-16">
+              <i
+                class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"
+              ></i
+              ><strong>ABOUT ME</strong>
+            </h2>
+            <div class="w3-container" style="font-size: larger">
+              <h4>Welcome to my Portfolio Website!</h4>
+              <p>
+                My name is Pradnya Magennavar. I'm passionate about web
+                development and design. Currently I am a second year student
+                from Sanjay Ghodawat University studying engineering in computer
+                science.
+              </p>
+              <p>
+                This is the place where I showcase my skills, projects, and
+                experience. Feel free to explore and get in touch with me to
+                discuss potential collaborations or opportunities.
+              </p>
+              <h2 class="w3-text-black w3-padding-16">
+                <i
+                  class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"
+                ></i
+                ><strong>CERTIFICATIONS</strong>
+              </h2>
+              <div class="certification-container">
+                <a href="https://www.udemy.com/certificate/UC-8cb2a5c5-a64d-413f-8d48-84303caf4878/" target="_blank">C++ For Beginners</a>
+                <img class="certification-img" src="https://firebasestorage.googleapis.com/v0/b/portfolio219-3f5d4.appspot.com/o/udmey%20cer.jpg?alt=media&token=4475c31d-5809-4907-80b9-bd911e56f15a" alt="C++ For Beginners Certificate">
+              </div>
+              
+              <div class="certification-container">
+                <a href="https://firebasestorage.googleapis.com/v0/b/portfolio219-3f5d4.appspot.com/o/learnTube.pdf?alt=media&token=1e86b2d0-4765-452d-879f-d33332b13d5f" target="_blank">Introduction to C++</a>
+                <img class="certification-img" src="https://firebasestorage.googleapis.com/v0/b/portfolio219-3f5d4.appspot.com/o/learn.JPG?alt=media&token=44e66977-933f-442c-a974-6fe76828cafa" alt="Introduction to C++">
+            </div>
+            
+            <div class="certification-container">
+              <a href="https://firebasestorage.googleapis.com/v0/b/portfolio219-3f5d4.appspot.com/o/ms.pdf?alt=media&token=2ee44a11-620c-4d36-8136-f51d72a55752" target="_blank">MS Excel for Beginners</a>
+              <img class="certification-img" src="https://firebasestorage.googleapis.com/v0/b/portfolio219-3f5d4.appspot.com/o/ms%20ex.jpg?alt=media&token=0679a3ef-5b85-43c7-af5a-93645bddd05e" alt="MS Excel Beginners to Advanced Course">
+            </div>
+            
+              <hr />
+            </div>
+            <a href="https://firebasestorage.googleapis.com/v0/b/portfolio219-3f5d4.appspot.com/o/Resume.pdf?alt=media&token=d52ad9a0-4361-4350-b2fb-d609ec72adba" class="resume-btn" download target="_blank"> <strong> Download Resume <br></strong></a>
+          <br><br></div>
+           <!-- Projects -->
+<div class="w3-container w3-card w3-white w3-margin-bottom">
+  <h2 class="w3-text-black w3-padding-16">
+    <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i><strong>PROJECTS</strong>
+  </h2>
+  
+ <!-- Project 1 -->
+<div>
+  <h3 class="w3-text-grey"><a href="https://github.com/pradnya192/atm-management/blob/main/atm%20pbl.c" target="_blank">ATM Management System (C)</a></h3>
+</div>
+
+<!-- Project 2 -->
+<div>
+  <h3 class="w3-text-grey"><a href="https://github.com/pradnya192/car-retro/blob/main/retro%20car.pdf" target="_blank">Retro Car Game (C++)</a></h3>
+</div>
+
+<!-- Project 3 -->
+<div>
+  <h3 class="w3-text-grey"><a href="https://github.com/pradnya192/THEATER-MANAGEMENT/blob/main/code%2019.cpp" target="_blank">Theater Management System (C++)</a></h3>
+</div>
+<!-- Project 4 -->
+<div>
+  <h3 class="w3-text-grey"><a href="" target="_blank">Portfolio website</a></h3>
+</div>
+
+
+</div>
+
+
+<!-- Contact/Area Container -->
+<section class="sec5" id="contact">
+  <div class="contact-container">
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="contact-left"
+    >
+      <div class="contact-left-title" style="margin-top: 35px;">
+        <h2>Get in Touch</h2>
+        <hr />
+      </div>
+      <input
+        type="hidden"
+        name="access_key"
+        value="239bf3c6-59b9-4c0f-ae0b-8c677ea76ee0"
+      />
+      <input type="text" name="name" placeholder="Your Name"
+      class="contact-input" required / > <input type="email" name="email"
+      placeholder="Your Email" class="contact-input" required / >
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        class="contact-input"
+        required
+      ></textarea>
+      <button type="submit">
+        Submit
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/portfolio-9caa7.appspot.com/o/arrow_icon.png?alt=media&token=8a811b17-12ef-4f08-aab2-cae539d5ac11"
+          alt=""
+        />
+      </button>
+    </form>
+  </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
+  </body>
+</html>
